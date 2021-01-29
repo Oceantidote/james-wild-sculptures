@@ -16,6 +16,6 @@ class HomepagesController < ApplicationController
   private
 
   def homepage_params
-    params.require(:homepage).permit(:project_one_id, :project_two_id, :project_three_id, :project_four_id, :bronze_title, :bronze_content, :scrap_title, :scrap_content, :work_title)
+    params.require(:homepage).permit(:project_one_id, :project_two_id, :project_three_id, :project_four_id, :bronze_title, :bronze_content, :scrap_title, :scrap_content, :work_title, :homepage_content)
   end
 end
