@@ -23,6 +23,7 @@ gem 'webpacker'
 gem 'trix'
 gem 'actiontext', '6.0'
 gem 'image_processing'
+gem 'aws-sdk-s3'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
