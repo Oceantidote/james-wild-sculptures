@@ -4,6 +4,7 @@ class HomepagesController < ApplicationController
     @homepage = Homepage.find(params[:id])
   end
 
+
   def update
     @homepage = Homepage.find(params[:id])
     if @homepage.update(homepage_params)
