@@ -1,4 +1,9 @@
 import "bootstrap";
-import $ from 'jquery';
-require("trix")
+import jQuery from 'jquery';
+try {
+  require("trix")
+}
+catch(err) {
+
+}
 require("@rails/actiontext")
