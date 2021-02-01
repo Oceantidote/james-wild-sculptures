@@ -64,7 +64,6 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(255,255,255,.75);
-  height: 60vh;
   width: 35vw;
   margin-left: 10vw;
   margin-top: 30px;
@@ -172,7 +171,9 @@
   align-items: center;
   margin-bottom: 10px;
 }
-
+.upper {
+  height: 100%;
+}
 @media only screen and (max-width: 1200px) {
   .contact-container {
     width: 100vw;
@@ -186,9 +187,7 @@
     align-items: center;
   }
   .contact-flex-holder {
-    height: 70vh;
     width: 80vw;
-    margin: 5vw 0;
   }
   .contact-holder {
     height: 50vh;

@@ -1,0 +1,14 @@
+<h1>Hi James</h1>
+
+<p>
+  <%= @email %>, just messaged you regarding a sculpture
+</p>
+<% if @phone %>
+  <p>They can be reached at <%= @phone %></p>
+<% else %>
+  <p>They did not leave a phone number</p>
+<% end %>
+
+<p>They left the following message:</p>
+
+<p><%= @message %></p>

@@ -30,6 +30,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'letter_opener', group: :development
   gem 'rb-readline'
   gem 'pry-byebug'
   gem 'pry-rails'

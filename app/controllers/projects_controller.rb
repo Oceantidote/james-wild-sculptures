@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
   def show
     @photos = @project.photos.select{ |photo| photo.url.url != nil }
     @photos.reverse!
+    @message = Message.new
   end
 
   def new

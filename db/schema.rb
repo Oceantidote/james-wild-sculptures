@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_29_164251) do
+ActiveRecord::Schema.define(version: 2021_02_01_120755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,14 @@ ActiveRecord::Schema.define(version: 2021_01_29_164251) do
     t.index ["project_one_id"], name: "index_homepages_on_project_one_id"
     t.index ["project_three_id"], name: "index_homepages_on_project_three_id"
     t.index ["project_two_id"], name: "index_homepages_on_project_two_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "email"
+    t.string "phone"
+    t.text "message"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "photos", force: :cascade do |t|

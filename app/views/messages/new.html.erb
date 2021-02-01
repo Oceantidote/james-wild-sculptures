@@ -1,0 +1,18 @@
+<div class="ex-modal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="exampleModalLongTitle">Interested in acquiring this sculpture?</h4>
+      </div>
+      <div class="modal-body">
+        <h5 class="butler">Please leave a message and james will get back to you shortly.</h5>
+        <%= simple_form_for(@message) do |f| %>
+          <%= f.input :email, placeholder: "example@mail.com" %>
+          <%= f.input :phone, placeholder: "07545 583 957" %>
+          <%= f.input :message, placeholder: "Hi James, I would to like to find out a little more about this sculpture, please get in touch as soon as you are able" %>
+          <%= f.submit :Send, class: 'btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

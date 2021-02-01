@@ -1,0 +1,13 @@
+Hi James
+
+<%= @email %>, just messaged you regarding a sculpture
+
+<% if @phone %>
+  They can be reached at <%= @phone %>
+<% else %>
+  They did not leave a phone number
+<% end %>
+
+They left the following message:
+
+<%= @message %>

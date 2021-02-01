@@ -1,23 +1,42 @@
 <div class="contact-container">
-  <div class="section">
-    <div class="contact-flex-holder ">
-      <div class="contact-holder">
-        <h3 class="index-header mt20 black">CONTACT</h3>
-        <p class="text-center black">Please get in contact by</p>
-        <div class="contact-flex">
-          <%= image_tag ("Mail.png"), class: "contact-avatar" %>
-          <a class="bold-large black margin-left" style="font-family: 'Raleway'" href="mailto:jamie1wild@gmail.com">jamie1wild@gmail.com</a>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <div class="contact-flex-holder upper ">
+        <div class="contact-holder">
+          <h3 class="index-header mt20 black">CONTACT</h3>
+          <p class="text-center black">Please get in contact by</p>
+          <div class="contact-flex">
+            <%= image_tag ("Mail.png"), class: "contact-avatar" %>
+            <a class="bold-large black margin-left" style="font-family: 'Raleway'" href="mailto:jamie1wild@gmail.com">jamie1wild@gmail.com</a>
+          </div>
+          <div class="contact-flex">
+            <%= image_tag ("Phone.png"), class: "contact-avatar" %>
+            <p class="bold-large black margin-left">+44 7921 812332</p>
+          </div>
+          <a class="download" href="<%= asset_path('ONE_WILD.pdf') %>" download>
+            Download Brochure
+          </a>
         </div>
-        <div class="contact-flex">
-          <%= image_tag ("Phone.png"), class: "contact-avatar" %>
-          <p class="bold-large black margin-left">+44 7921 812332</p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="contact-flex-holder upper">
+        <div class="contact-holder-lower">
+          <div class="modal-header">
+            <h4>Interested in acquiring a sculpture?</h4>
+          </div>
+          <div class="modal-body">
+            <h5 class="butler">Please leave a message and james will get back to you shortly.</h5>
+            <%= simple_form_for(@message) do |f| %>
+              <%= f.input :email, placeholder: "example@mail.com" %>
+              <%= f.input :phone, placeholder: "07545 583 957" %>
+              <%= f.input :message, placeholder: "Hi James, I would to like to find out a little more about one of your sculptures, please get in touch as soon as you are able" %>
+              <%= f.submit :Send, class: 'btn-primary' %>
+            <% end %>
+          </div>
         </div>
-        <a class="download" href="<%= asset_path('ONE_WILD.pdf') %>" download>
-          Download Brochure
-        </a>
       </div>
     </div>
   </div>
-  <div class="section"></div>
 </div>
 

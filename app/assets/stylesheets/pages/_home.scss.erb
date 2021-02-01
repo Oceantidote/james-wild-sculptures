@@ -7,6 +7,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+label {
+  font-family: "ButlerRegular", "Helvetica", "sans-serif";
+}
 
 a {
   font-family: 'ButlerBold';
@@ -18,7 +21,21 @@ a {
     color: $etch;
   }
 }
-
+.ex-modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 100vh;
+  background-color: #F6EfD5;
+}
+.m-5v {
+  margin: 5vh;
+}
+.butler {
+  font-family: "ButlerRegular", "Helvetica", "sans-serif";
+}
 p {
   font-family: "Raleway";
   font-size: 20px;
@@ -56,6 +73,9 @@ h3 {
   padding: 5vw 0;
   background-position: right;
 }
+.modal {
+  background-color: #F6EfD5 !important;
+}
 .tc {
   text-align: center;
   font-family: 'Raleway';
@@ -75,6 +95,16 @@ h3 {
 .display-4:hover {
   text-decoration: none !important;
   color: white;
+}
+.btn-primary {
+  background-color: #F6EfD5;
+  color: black;
+  border: 2px solid black;
+  &:hover {
+    color: #F6EfD5;
+    border: 2px solid #F6EfD5;
+    background-color: black;
+  }
 }
 .carousel-item {
   height: calc(100vh - 66px);

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'messages/create'
   get 'contacts/new'
   devise_for :users
   resources :projects
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
       get 'sent'
     end
   end
+  resources :messages, only: [:create, :new]
   resources :homepages, only: [:edit, :update]
   resources :photos, only: [:destroy]
   resources :updates

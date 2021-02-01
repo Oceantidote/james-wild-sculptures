@@ -7,6 +7,7 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
+    @message = Message.new
   end
 
   def create

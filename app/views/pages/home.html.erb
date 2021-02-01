@@ -8,7 +8,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('<%= cl_image_path(@homepage.project_one.photo) %>')">
+      <div class="carousel-item active" style="background-image: url('<%= cl_image_path(@homepage.project_one.photo.present? ? @homepage.project_one.photo : @homepage.project_one.photos.first.url) %>')">
         <div class="carousel-caption d-md-block">
           <%= link_to project_path(@homepage.project_one), class: "no-hover" do  %>
             <h2 class="display-4">
@@ -18,7 +18,7 @@
           <% end %>
       </div>
       <!-- project Two - Set the background image for this project in the line below -->
-      <div class="carousel-item" style="background-image: url('<%= cl_image_path(@homepage.project_two.photo) %>')">
+      <div class="carousel-item" style="background-image: url('<%= cl_image_path(@homepage.project_two.photo.present? ? @homepage.project_two.photo : @homepage.project_two.photos.first.url) %>')">
         <div class="carousel-caption d-md-block">
           <%= link_to project_path(@homepage.project_two), class: "no-hover" do %>
             <h2 class="display-4">
@@ -28,7 +28,7 @@
         </div>
       </div>
       <!-- project Three - Set the background image for this project in the line below -->
-      <div class="carousel-item" style="background-image: url('<%= cl_image_path(@homepage.project_three.photo) %>')">
+      <div class="carousel-item" style="background-image: url('<%= cl_image_path(@homepage.project_three.photo.present? ? @homepage.project_three.photo : @homepage.project_three.photos.first.url) %>')">
         <div class="carousel-caption d-md-block">
           <%= link_to project_path(@homepage.project_three), class: "no-hover" do %>
             <h2 class="display-4">
@@ -37,7 +37,7 @@
           <% end %>
         </div>
       </div>
-      <div class="carousel-item" style="background-image: url('<%= cl_image_path(@homepage.project_four.photo) %>')">
+      <div class="carousel-item" style="background-image: url('<%= cl_image_path(@homepage.project_four.photo.present? ? @homepage.project_four.photo : @homepage.project_four.photos.first.url) %>')">
         <div class="carousel-caption d-md-block">
           <%= link_to project_path(@homepage.project_four), class: "no-hover" do %>
             <h2 class="display-4">
