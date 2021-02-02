@@ -13,7 +13,7 @@
             <%= image_tag ("Phone.png"), class: "contact-avatar" %>
             <p class="bold-large black margin-left">+44 7921 812332</p>
           </div>
-          <a class="download" href="<%= asset_path('ONE_WILD.pdf') %>" download>
+          <a class="download mb-4" href="<%= asset_path('ONE_WILD.pdf') %>" download>
             Download Brochure
           </a>
         </div>
@@ -31,7 +31,9 @@
               <%= f.input :email, placeholder: "example@mail.com" %>
               <%= f.input :phone, placeholder: "07545 583 957" %>
               <%= f.input :message, placeholder: "Hi James, I would to like to find out a little more about one of your sculptures, please get in touch as soon as you are able" %>
-              <%= f.submit :Send, class: 'btn-primary' %>
+              <div class="dcen mt-4">
+                <%= f.submit :Send, class: 'btn-primary mt-4' %>
+              </div>
             <% end %>
           </div>
         </div>

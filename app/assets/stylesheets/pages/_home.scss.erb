@@ -97,14 +97,26 @@ h3 {
   color: white;
 }
 .btn-primary {
-  background-color: #F6EfD5;
-  color: black;
-  border: 2px solid black;
-  &:hover {
-    color: #F6EfD5;
-    border: 2px solid #F6EfD5;
-    background-color: black;
-  }
+  font-family: 'ButlerBold';
+  border: none !important;
+  font-size: 20px;
+  padding: 10px;
+   background-color: $etch;
+   border-radius: 4px;
+   color: $black;
+   text-align: center;
+   margin: 0 auto;
+   min-width: 210px;
+   &:hover {
+     color: $etch;
+     text-decoration: none !important;
+     background-color: $black;
+   }
+   &:focus {
+     color: $etch;
+     text-decoration: none !important;
+     background-color: $black;
+   }
 }
 .carousel-item {
   height: calc(100vh - 66px);
