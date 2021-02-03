@@ -10,7 +10,9 @@ html {
 label {
   font-family: "ButlerRegular", "Helvetica", "sans-serif";
 }
-
+.form-check-label {
+  margin-left: 20px;
+}
 a {
   font-family: 'ButlerBold';
   font-weight: normal;
@@ -20,6 +22,11 @@ a {
   &:hover {
     color: $etch;
   }
+}
+input[type="radio"], input[type="checkbox"] {
+    margin: 6px 0 0;
+    margin-top: 1px \9;
+    line-height: normal;
 }
 .ex-modal {
   position: absolute;
