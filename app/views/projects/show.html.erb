@@ -49,7 +49,7 @@
 
   <div class="dcen m-5v">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-      Enquire about this sculpture
+      Contact James
     </button>
   </div>
 
@@ -76,7 +76,7 @@
 <%= cl_image_tag @project.photo, class: "bronze-image" %>
 
 <% if @project.photos.length > 0 %>
-  <div id="myModal" class="modal fade" role="dialog">
+  <div id="myModal" class="modal" role="dialog">
     <div data-dismiss="modal"  aria-label="Close" class='close'>
       <%= image_tag 'close.png', class: "close-modal-icon", id:"close-modal" %>
     </div>
@@ -96,18 +96,19 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 id="exampleModalLongTitle">Interested in acquiring <%= @project.name %>?</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h4 id="exampleModalLongTitle" style="text-align: center;">To find out more, please contact James</h4>
+        <button type="button" class="close" style="margin-left: 0px;" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h5 class="butler">Please leave a message and james will get back to you shortly.</h5>
         <%= simple_form_for(@message) do |f| %>
-          <%= f.input :email, placeholder: "example@mail.com" %>
-          <%= f.input :phone, placeholder: "07545 583 957" %>
-          <%= f.input :message, placeholder: "Hi James, I would to like to find out a little more about this sculpture, please get in touch as soon as you are able" %>
-          <%= f.submit :Send, class: 'btn-primary' %>
+          <%= f.input :email %>
+          <%= f.input :phone %>
+          <%= f.input :message %>
+          <div class="dcen">
+            <%= f.submit :Send, class: 'btn-primary' %>
+          </div>
         <% end %>
       </div>
     </div>
@@ -178,9 +179,10 @@
       currentImage = images.indexOf(visibleImage)
     }
   })
+
   // document.getElementById('close-modal').addEventListener('click', () => {
   //   document.getElementById('myModal').classList.remove('show')
-  //   document.getElementById('myModal').style.display = 'unset'
+  //   document.getElementById('myModal').style.display = 'none'
   //   document.querySelector('.modal-backdrop').classList.remove('show')
   //   document.querySelector('.modal-backdrop').style.display = 'none'
   // })

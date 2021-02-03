@@ -1,3 +1,36 @@
+.mailing-list {
+  background: $letch;
+  padding: 15px 15px 0px 15px;
+  text-align: center;
+  // border-bottom: 1px solid black;
+  h5 {
+    font-family: 'Raleway';
+    margin: 4px 0px 8px 0px;
+  }
+}
+.br-r {
+  border-radius: 0px 4px 4px 0px !important;
+}
+#subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+input#email {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.428571429;
+  color: #000000;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px 0px 0px 4px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
 .footer {
   background: $letch;
   display: flex;

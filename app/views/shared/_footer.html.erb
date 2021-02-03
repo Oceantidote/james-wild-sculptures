@@ -1,3 +1,12 @@
+<div class="mailing-list">
+  <h5>Sign up to my newsletter to receive updates from the workshop</h5>
+  <div class="dcen">
+    <%= form_tag('/pages/subscribe', method: "post", id: "subscribe",) do %>
+      <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
+      <%= submit_tag("Sign Up", class: "btn-primary br-r") %>
+    <% end %>
+  </div>
+</div>
 <div class="footer">
   <% if user_signed_in? %>
     <%= link_to "NEW PROJECT", new_project_path %>

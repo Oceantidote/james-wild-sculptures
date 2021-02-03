@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'sent'
     end
   end
+  post "pages/subscribe", to: "pages#subscribe"
   resources :messages, only: [:create, :new]
   resources :homepages, only: [:edit, :update]
   resources :photos, only: [:destroy]

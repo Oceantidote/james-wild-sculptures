@@ -9,6 +9,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '6.0'
 gem 'sass'
+gem 'gibbon'
 gem 'redis'
 gem 'cloudinary', '~> 1.9.1'
 gem 'dotenv-rails', groups: [:development, :test]
