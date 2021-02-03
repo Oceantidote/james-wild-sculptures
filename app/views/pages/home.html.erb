@@ -8,7 +8,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('<%= cl_image_path(@homepage.project_one.photo.present? ? @homepage.project_one.photo : @homepage.project_one.photos.first.url) %>')">
+      <div class="carousel-item active banner_one">
         <div class="carousel-caption d-md-block">
           <%= link_to project_path(@homepage.project_one), class: "no-hover" do  %>
             <h2 class="display-4">
@@ -17,8 +17,20 @@
           </div>
           <% end %>
       </div>
+      <style>
+        @media screen and (min-width: 767px) {
+          .banner_one {
+            background-image: url('<%= cl_image_path(@homepage.project_one.photo.present? ? @homepage.project_one.photo : @homepage.project_one.photos.first.url) %>');
+          }
+        }
+        @media screen and (max-width: 766.95px) {
+          .banner_one {
+            background-image: url('<%= cl_image_path(@homepage.project_one.mobile_photo.present? ? @homepage.project_one.mobile_photo : @homepage.project_one.photos.first.url) %>');
+          }
+        }
+      </style>
       <!-- project Two - Set the background image for this project in the line below -->
-      <div class="carousel-item" style="background-image: url('<%= cl_image_path(@homepage.project_two.photo.present? ? @homepage.project_two.photo : @homepage.project_two.photos.first.url) %>')">
+      <div class="carousel-item banner_two">
         <div class="carousel-caption d-md-block">
           <%= link_to project_path(@homepage.project_two), class: "no-hover" do %>
             <h2 class="display-4">
@@ -27,8 +39,20 @@
           <% end %>
         </div>
       </div>
+      <style>
+        @media screen and (min-width: 767px) {
+          .banner_two {
+            background-image: url('<%= cl_image_path(@homepage.project_two.photo.present? ? @homepage.project_two.photo : @homepage.project_two.photos.first.url) %>');
+          }
+        }
+        @media screen and (max-width: 766.95px) {
+          .banner_two {
+            background-image: url('<%= cl_image_path(@homepage.project_two.mobile_photo.present? ? @homepage.project_two.mobile_photo : @homepage.project_two.photos.first.url) %>');
+          }
+        }
+      </style>
       <!-- project Three - Set the background image for this project in the line below -->
-      <div class="carousel-item" style="background-image: url('<%= cl_image_path(@homepage.project_three.photo.present? ? @homepage.project_three.photo : @homepage.project_three.photos.first.url) %>')">
+      <div class="carousel-item banner_three">
         <div class="carousel-caption d-md-block">
           <%= link_to project_path(@homepage.project_three), class: "no-hover" do %>
             <h2 class="display-4">
@@ -37,7 +61,19 @@
           <% end %>
         </div>
       </div>
-      <div class="carousel-item" style="background-image: url('<%= cl_image_path(@homepage.project_four.photo.present? ? @homepage.project_four.photo : @homepage.project_four.photos.first.url) %>')">
+      <style>
+        @media screen and (min-width: 767px) {
+          .banner_three {
+            background-image: url('<%= cl_image_path(@homepage.project_three.photo.present? ? @homepage.project_three.photo : @homepage.project_three.photos.first.url) %>');
+          }
+        }
+        @media screen and (max-width: 766.95px) {
+          .banner_three {
+            background-image: url('<%= cl_image_path(@homepage.project_three.mobile_photo.present? ? @homepage.project_three.mobile_photo : @homepage.project_three.photos.first.url) %>');
+          }
+        }
+      </style>
+      <div class="carousel-item banner_four">
         <div class="carousel-caption d-md-block">
           <%= link_to project_path(@homepage.project_four), class: "no-hover" do %>
             <h2 class="display-4">
@@ -46,6 +82,18 @@
           <% end %>
         </div>
       </div>
+      <style>
+        @media screen and (min-width: 767px) {
+          .banner_four {
+            background-image: url('<%= cl_image_path(@homepage.project_four.photo.present? ? @homepage.project_four.photo : @homepage.project_four.photos.first.url) %>');
+          }
+        }
+        @media screen and (max-width: 766.95px) {
+          .banner_four {
+            background-image: url('<%= cl_image_path(@homepage.project_four.mobile_photo.present? ? @homepage.project_four.mobile_photo : @homepage.project_four.photos.first.url) %>');
+          }
+        }
+      </style>
     </div>
   </div>
 
@@ -75,7 +123,16 @@
         </div>
       </div>
     </div>
+    <div class="dcen m-5v">
+      <%= link_to new_contact_path do %>
+        <button type="button" class="btn btn-primary">
+          Get in touch
+        </button>
+      <% end %>
+    </div>
   </div>
+
+
   <div class="home-video">
     <div class="player">
 

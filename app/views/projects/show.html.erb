@@ -77,7 +77,7 @@
 
 <% if @project.photos.length > 0 %>
   <div id="myModal" class="modal fade" role="dialog">
-    <div data-dismiss="modal">
+    <div data-dismiss="modal"  aria-label="Close" class='close'>
       <%= image_tag 'close.png', class: "close-modal-icon", id:"close-modal" %>
     </div>
     <div class="modal-container">
@@ -178,9 +178,12 @@
       currentImage = images.indexOf(visibleImage)
     }
   })
-  document.getElementById('close-modal').addEventListener('click', () => {
-    document.getElementById('myModal').classList.remove('show')
-  })
+  // document.getElementById('close-modal').addEventListener('click', () => {
+  //   document.getElementById('myModal').classList.remove('show')
+  //   document.getElementById('myModal').style.display = 'unset'
+  //   document.querySelector('.modal-backdrop').classList.remove('show')
+  //   document.querySelector('.modal-backdrop').style.display = 'none'
+  // })
   // Reset the modal to show the first image when the modal is closed
 
   // document.addEventListener("DOMNodeRemoved",function() {
