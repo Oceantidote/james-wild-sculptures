@@ -22,7 +22,10 @@
         <%= f.text_field :edition, class:"form-control" %>
         <%= f.label :price, 'Project price', class:"form-control-label" %>
         <%= f.text_field :price, class:"form-control" %>
+        <p class="m-3">Main Photo (landscape)</p>
         <%= f.file_field :photo %>
+        <p class="m-3">Mobile Photo (portrait)</p>
+        <%= f.file_field :mobile_photo %>
         <br>
         <%= f.label :photos, 'Project Photos', class:"form-control-label" %>
         <%= f.fields_for :photos do |photo| %>
